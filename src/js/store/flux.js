@@ -1,45 +1,60 @@
 const getState = ({ getStore, getActions, setStore }) => {
-	return {
-		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
-		},
-		actions: {
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
-			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
-			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
+  return {
+    store: {
+      people: [],
+      planets: [],
+      vehicles: [],
+	  favorites: [],
+    },
+    actions: {
+      // Use getActions to call a function within a fuction
+      getPeople: () => {
+        fetch("https://www.swapi.tech/api/people/")
+          .then((resp) => {
+            if (!resp.ok) throw Error(resp.statusText);
+            return resp.json();
+          })
+          .then((data) => {
+            console.log(data);
 
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
+            setStore({ people: data });
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      },
+      getPlanets: () => {
+        fetch("https://www.swapi.tech/api/planets/")
+          .then((resp) => {
+            if (!resp.ok) throw Error(resp.statusText);
+            return resp.json();
+          })
+          .then((data) => {
+            console.log(data);
 
-				//reset the global store
-				setStore({ demo: demo });
-			}
-		}
-	};
+            setStore({ planets: data });
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      },
+      getVehicles: () => {
+        fetch("https://www.swapi.tech/api/vehicles/")
+          .then((resp) => {
+            if (!resp.ok) throw Error(resp.statusText);
+            return resp.json();
+          })
+          .then((data) => {
+            console.log(data);
+
+            setStore({ vehicles: data });
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      },
+    },
+  };
 };
 
 export default getState;

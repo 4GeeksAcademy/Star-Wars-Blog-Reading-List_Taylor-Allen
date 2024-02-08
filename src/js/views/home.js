@@ -1,15 +1,12 @@
 import React from "react";
 import "../../styles/home.css";
 import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
 import { Star } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 
 export const Home = () => {
   return (
-    <div
-      className="container"
-    >
+    <div className="container">
       <Card style={{ width: "18rem" }}>
         <Card.Img
           variant="top"
