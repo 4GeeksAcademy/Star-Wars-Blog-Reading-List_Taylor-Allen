@@ -6,7 +6,7 @@ export const Navbar = () => {
   const { store, actions } = useContext(Context);
 
   return (
-    <nav className="navbar bg-body-tertiary">
+    <nav className="navbar">
       <div className="container">
         <div>
           <Link to={"/"} className="navbar-brand">
@@ -18,7 +18,7 @@ export const Navbar = () => {
             />
           </Link>
         </div>
-        <div>
+        <div className="d-flex justify-content-center">
           <form className="d-flex" role="search">
             <input
               className="form-control me-2"
@@ -28,14 +28,14 @@ export const Navbar = () => {
               autoComplete="on"
             />
           </form>
-          <button className="btn btn-outline-dark" type="submit">
+          <button className="btn btn-outline-light" type="submit">
             Search
           </button>
         </div>
         <div>
           <button
             type="button"
-            className="btn btn-primary"
+            className="btn btn-light"
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
           >
@@ -75,7 +75,7 @@ export const Navbar = () => {
                           onClick={() => actions.handleDelete({ _id: fav._id })}
                           className="btn btn-danger rounded"
                         >
-                          delete
+                          Remove
                         </button>
                       </div>
                     ))}

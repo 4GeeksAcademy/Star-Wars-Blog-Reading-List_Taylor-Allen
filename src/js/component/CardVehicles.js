@@ -52,7 +52,7 @@ const CardVehicles = () => {
                             }}
                             className="btn btn-warning"
                           >
-                            favorites
+                            Add to Favorites
                           </button>
                         </div>
                       </div>
