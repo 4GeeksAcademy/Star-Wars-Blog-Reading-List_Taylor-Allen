@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import "../../styles/details.css";
+import { ArrowReturnLeft } from "react-bootstrap-icons";
 
 export const Characters = () => {
   const params = useParams();
@@ -39,6 +41,11 @@ export const Characters = () => {
             asperiores ducimus recusandae voluptate corrupti cumque eum facere.
             Quam, facilis vero?
           </p>
+          <Link to={"/"}>
+            <button className="btn btn-dark">
+              <ArrowReturnLeft size={35} />
+            </button>
+          </Link>
         </div>
         <img
           src={`https://starwars-visualguide.com/assets/img/characters/${params.uid}.jpg`}

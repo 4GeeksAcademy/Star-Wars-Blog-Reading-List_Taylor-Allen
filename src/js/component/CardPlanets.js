@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
+import { Star } from "react-bootstrap-icons";
 
 const CardPlanets = () => {
   const { store, actions } = useContext(Context);
@@ -53,7 +54,7 @@ const CardPlanets = () => {
                             }}
                             className="btn btn-warning"
                           >
-                            favorites
+                            <Star size={25} />
                           </button>
                         </div>
                       </div>

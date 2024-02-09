@@ -1,13 +1,14 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
+import { Star } from "react-bootstrap-icons";
 
 const CardCharacter = () => {
   const { store, actions } = useContext(Context);
 
   return (
     <>
-      <h3>Characters</h3>
+      <h3 className="p-5">Characters</h3>
       <div className="d-flex justify-content-center">
         <div className="container row row-cols-5">
           {store.characters.map((character) => {
@@ -58,7 +59,7 @@ const CardCharacter = () => {
                             }}
                             className="btn btn-warning"
                           >
-                            favorites
+                            <Star size={25} />
                           </button>
                         </div>
                       </div>

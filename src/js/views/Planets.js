@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
+import "../../styles/details.css";
+import { Link } from "react-router-dom";
 
 export const Planets = () => {
   const params = useParams();
@@ -37,6 +39,11 @@ export const Planets = () => {
             impedit fugiat dolorum, perspiciatis vero dignissimos repudiandae
             incidunt quaerat quod eos accusantium. Deleniti, cum quos?
           </p>
+          <Link to={"/"}>
+            <button className="btn btn-dark">
+              <ArrowReturnLeft size={35} />
+            </button>
+          </Link>
         </div>
         <img
           src={`https://starwars-visualguide.com/assets/img/planets/${params.uid}.jpg`}
