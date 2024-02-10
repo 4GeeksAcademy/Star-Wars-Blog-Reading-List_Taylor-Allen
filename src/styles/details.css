@@ -1,3 +1,13 @@
-.details-page {
+.pe-5 {
   color: gold;
+  font-size: 24px;
+}
+
+.opacity {
+  background: rgba(255, 255, 255, 0.422);
+  color: white;
+}
+
+.details-page {
+  margin-top: 100px;
 }

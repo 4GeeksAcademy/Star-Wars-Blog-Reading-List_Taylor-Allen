@@ -7,6 +7,9 @@ const getState = ({ getStore, getActions, setStore }) => {
       vehicles: JSON.parse(localStorage.getItem("vehicles")) || [],
       favorites: [],
     },
+
+
+
     actions: {
       getCharacters: async () => {
         const store = getStore();
@@ -23,6 +26,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           localStorage.setItem("characters", JSON.stringify(store.characters));
         }
       },
+
       getPlanets: async () => {
         const store = getStore();
         if (store.planets <= 0) {
