@@ -48,58 +48,58 @@ export const Planets = () => {
               alt=""
             />
           </div>
-          <div class="row pb-5">
-            <div class="col-sm-2">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Name</h5>
-                  <p class="card-text">{planetDetails.name}</p>
+          <div className="row pb-5">
+            <div className="col-sm-2">
+              <div className="card">
+                <div className="card-body">
+                  <h5 className="card-title">Name</h5>
+                  <p className="card-text">{planetDetails.name}</p>
                 </div>
               </div>
             </div>
-            <div class="col-sm-2">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Diameter</h5>
-                  <p class="card-text">{planetDetails.diameter}</p>
+            <div className="col-sm-2">
+              <div className="card">
+                <div className="card-body">
+                  <h5 className="card-title">Diameter</h5>
+                  <p className="card-text">{planetDetails.diameter}</p>
                 </div>
               </div>
             </div>
-            <div class="col-sm-2">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Population</h5>
-                  <p class="card-text">{planetDetails.population}</p>
+            <div className="col-sm-2">
+              <div className="card">
+                <div className="card-body">
+                  <h5 className="card-title">Population</h5>
+                  <p className="card-text">{planetDetails.population}</p>
                 </div>
               </div>
             </div>
-            <div class="col-sm-2">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Terrain</h5>
-                  <p class="card-text">{planetDetails.terrain}</p>
+            <div className="col-sm-2">
+              <div className="card">
+                <div className="card-body">
+                  <h5 className="card-title">Terrain</h5>
+                  <p className="card-text">{planetDetails.terrain}</p>
                 </div>
               </div>
             </div>
-            <div class="col-sm-2">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Oribital Period</h5>
-                  <p class="card-text">{planetDetails.orbital_period}</p>
+            <div className="col-sm-2">
+              <div className="card">
+                <div className="card-body">
+                  <h5 className="card-title">Oribital Period</h5>
+                  <p className="card-text">{planetDetails.orbital_period}</p>
                 </div>
               </div>
             </div>
-            <div class="col-sm-2">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Rotation Period</h5>
-                  <p class="card-text">{planetDetails.rotation_period}</p>
+            <div className="col-sm-2">
+              <div className="card">
+                <div className="card-body">
+                  <h5 className="card-title">Rotation Period</h5>
+                  <p className="card-text">{planetDetails.rotation_period}</p>
                 </div>
               </div>
             </div>
           </div>
           <Link to={"/"}>
-            <button className="btn btn-dark">
+            <button className="btn btn-light">
               <ArrowReturnLeft size={35} />
             </button>
           </Link>

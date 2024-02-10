@@ -24,7 +24,7 @@ export const Vehicles = () => {
         <div className="details-page">
           <h1>{VehicleDetails.name}</h1>
           <div className="d-flex justify-content-center">
-            <p className="details-page">
+            <p className="details-page pe-5">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Molestiae, cupiditate commodi! Maxime quod molestias iure eos
               ratione harum itaque, repellendus assumenda voluptatum
@@ -49,56 +49,56 @@ export const Vehicles = () => {
           </div>
           <div class="row pb-5">
             <div class="col-sm-2">
-              <div class="card opacity">
+              <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Name</h5>
-                  <p class="card-text">{CharacterDetails.name}</p>
+                  <p class="card-text">{VehicleDetails.name}</p>
                 </div>
               </div>
             </div>
             <div class="col-sm-2">
-              <div class="card opacity">
+              <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">Birth Year</h5>
-                  <p class="card-text">{CharacterDetails.birth_year}</p>
+                  <h5 class="card-title">Model</h5>
+                  <p class="card-text">{VehicleDetails.model}</p>
                 </div>
               </div>
             </div>
             <div class="col-sm-2">
-              <div class="card opacity">
+              <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">Gender</h5>
-                  <p class="card-text">{CharacterDetails.gender}</p>
+                  <h5 class="card-title">Vehicle Class</h5>
+                  <p class="card-text">{VehicleDetails.vehicle_class}</p>
                 </div>
               </div>
             </div>
             <div class="col-sm-2">
-              <div class="card opacity">
+              <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">Height</h5>
-                  <p class="card-text">{CharacterDetails.height}</p>
+                  <h5 class="card-title">Manufacturer</h5>
+                  <p class="card-text">{VehicleDetails.manufacturer}</p>
                 </div>
               </div>
             </div>
             <div class="col-sm-2">
-              <div class="card opacity">
+              <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">Skin Color</h5>
-                  <p class="card-text">{CharacterDetails.skin_color}</p>
+                  <h5 class="card-title">Consumables</h5>
+                  <p class="card-text">{VehicleDetails.consumables}</p>
                 </div>
               </div>
             </div>
             <div class="col-sm-2">
-              <div class="card opacity">
+              <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">Eye Color</h5>
-                  <p class="card-text">{CharacterDetails.eye_color}</p>
+                  <h5 class="card-title">Crew</h5>
+                  <p class="card-text">{VehicleDetails.crew}</p>
                 </div>
               </div>
             </div>
           </div>
           <Link to={"/"}>
-            <button className="btn btn-dark">
+            <button className="btn btn-light">
               <ArrowReturnLeft size={35} />
             </button>
           </Link>

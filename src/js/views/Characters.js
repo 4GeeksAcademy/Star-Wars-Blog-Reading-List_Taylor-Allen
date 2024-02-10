@@ -25,7 +25,7 @@ export const Characters = () => {
         <div className="details-page">
           <h1>{CharacterDetails.name}</h1>
           <div className="d-flex justify-content-center">
-            <p className="pe-5">
+            <p className="dtails-page pe-5">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis
               atque quisquam praesentium quae veniam nobis consequuntur culpa
               doloribus reprehenderit deserunt ipsa nostrum, nulla doloremque,
@@ -42,66 +42,67 @@ export const Characters = () => {
               animi quia asperiores ducimus recusandae voluptate corrupti cumque
               eum facere. Quam, facilis vero?
             </p>
-
-            <img
-              className="pb-5"
-              src={`https://starwars-visualguide.com/assets/img/characters/${params.uid}.jpg`}
-              alt=""
-            />
+            <div>
+              <img
+                className="pb-5"
+                src={`https://starwars-visualguide.com/assets/img/characters/${params.uid}.jpg`}
+                alt=""
+              />
+            </div>
           </div>
-          <div class="row pb-5">
-            <div class="col-sm-2">
-              <div class="card opacity">
-                <div class="card-body">
-                  <h5 class="card-title">Name</h5>
-                  <p class="card-text">{CharacterDetails.name}</p>
+          <div className="row pb-5">
+            <div className="col-sm-2">
+              <div className="card">
+                <div className="card-body">
+                  <h5 className="card-title">Name</h5>
+                  <p className="card-text">{CharacterDetails.name}</p>
                 </div>
               </div>
             </div>
-            <div class="col-sm-2">
-              <div class="card opacity">
-                <div class="card-body">
-                  <h5 class="card-title">Birth Year</h5>
-                  <p class="card-text">{CharacterDetails.birth_year}</p>
+            <div className="col-sm-2">
+              <div className="card">
+                <div className="card-body">
+                  <h5 className="card-title">Birth Year</h5>
+                  <p className="card-text">{CharacterDetails.birth_year}</p>
                 </div>
               </div>
             </div>
-            <div class="col-sm-2">
-              <div class="card opacity">
-                <div class="card-body">
-                  <h5 class="card-title">Gender</h5>
-                  <p class="card-text">{CharacterDetails.gender}</p>
+            <div className="col-sm-2">
+              <div className="card">
+                <div className="card-body">
+                  <h5 className="card-title">Gender</h5>
+                  <p className="card-text">{CharacterDetails.gender}</p>
                 </div>
               </div>
             </div>
-            <div class="col-sm-2">
-              <div class="card opacity">
-                <div class="card-body">
-                  <h5 class="card-title">Height</h5>
-                  <p class="card-text">{CharacterDetails.height}</p>
+            <div className="col-sm-2">
+              <div className="card">
+                <div className="card-body">
+                  <h5 className="card-title">Height</h5>
+                  <p className="card-text">{CharacterDetails.height}</p>
                 </div>
               </div>
             </div>
-            <div class="col-sm-2">
-              <div class="card opacity">
-                <div class="card-body">
-                  <h5 class="card-title">Skin Color</h5>
-                  <p class="card-text">{CharacterDetails.skin_color}</p>
+            <div className="col-sm-2">
+              <div className="card">
+                <div className="card-body">
+                  <h5 className="card-title">Skin Color</h5>
+                  <p className="card-text">{CharacterDetails.skin_color}</p>
                 </div>
               </div>
             </div>
-            <div class="col-sm-2">
-              <div class="card opacity">
-                <div class="card-body">
-                  <h5 class="card-title">Eye Color</h5>
-                  <p class="card-text">{CharacterDetails.eye_color}</p>
+            <div className="col-sm-2">
+              <div className="card">
+                <div className="card-body">
+                  <h5 className="card-title">Eye Color</h5>
+                  <p className="card-text">{CharacterDetails.eye_color}</p>
                 </div>
               </div>
             </div>
           </div>
 
           <Link to={"/"}>
-            <button className="btn btn-dark">
+            <button className="btn btn-light">
               <ArrowReturnLeft size={35} />
             </button>
           </Link>

@@ -8,8 +8,6 @@ const getState = ({ getStore, getActions, setStore }) => {
       favorites: [],
     },
 
-
-
     actions: {
       getCharacters: async () => {
         const store = getStore();
@@ -19,9 +17,11 @@ const getState = ({ getStore, getActions, setStore }) => {
           console.log(charactersList.results);
           for (let details of charactersList.results) {
             const detailsResponse = await fetch(details.url);
-            const detailsJson = await detailsResponse.json();
+            const detailsCharacters = await detailsResponse.json();
             // console.log(detailsJson);
-            setStore({ characters: [...store.characters, detailsJson.result] });
+            setStore({
+              characters: [...store.characters, detailsCharacters.result],
+            });
           }
           localStorage.setItem("characters", JSON.stringify(store.characters));
         }
