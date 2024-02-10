@@ -22,7 +22,7 @@ export const Characters = () => {
   return (
     <>
       <div className="container d-flex justify-content-between">
-        <div>
+        <div className="details-page">
           <h1>{CharacterDetails.name}</h1>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis

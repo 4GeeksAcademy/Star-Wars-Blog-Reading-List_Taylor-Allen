@@ -57,9 +57,9 @@ const getState = ({ getStore, getActions, setStore }) => {
       handleFavorite: (item) => {
         const store = getStore();
         const actions = getActions();
-        if (store.favorites.some(fav => fav._id == item._id)){
-          actions.handleDelete(item)
-          return null
+        if (store.favorites.some((fav) => fav._id == item._id)) {
+          actions.handleDelete(item);
+          return null;
         }
         setStore({ favorites: [...store.favorites, item] });
         console.log(store.favorites);
@@ -67,8 +67,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       handleDelete: (item) => {
         const store = getStore();
-        const itemDeleted = store.favorites.filter((fav) => item._id !== fav._id);
-        console.log(itemDeleted.properties)
+        const itemDeleted = store.favorites.filter(
+          (fav) => item._id !== fav._id
+        );
+        console.log(itemDeleted.properties);
         setStore({ favorites: itemDeleted });
       },
     },

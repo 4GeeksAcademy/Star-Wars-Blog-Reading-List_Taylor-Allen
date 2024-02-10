@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import "../../styles/details.css";
 import { Link } from "react-router-dom";
+import { ArrowReturnLeft } from "react-bootstrap-icons";
 
 export const Planets = () => {
   const params = useParams();
@@ -22,7 +23,7 @@ export const Planets = () => {
       <div className="container d-flex justify-content-between">
         <div>
           <h1>{planetDetails.name}</h1>
-          <p>
+          <p className="details-page">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
             nesciunt, vitae quibusdam iusto illum animi iste aliquam autem
             dolores, fuga, blanditiis doloribus incidunt optio provident sed

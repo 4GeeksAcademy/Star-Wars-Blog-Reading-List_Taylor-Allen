@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import "../../styles/details.css";
 import { Link } from "react-router-dom";
+import { ArrowReturnLeft } from "react-bootstrap-icons";
 
 export const Vehicles = () => {
   const params = useParams();
@@ -22,7 +23,7 @@ export const Vehicles = () => {
       <div className="container d-flex justify-content-between">
         <div>
           <h1>{VehicleDetails.name}</h1>
-          <p>
+          <p className="details-page">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
             cupiditate commodi! Maxime quod molestias iure eos ratione harum
             itaque, repellendus assumenda voluptatum necessitatibus accusamus

@@ -2,13 +2,14 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import { Star } from "react-bootstrap-icons";
+import "../../styles/headers.css";
 
 const CardCharacter = () => {
   const { store, actions } = useContext(Context);
 
   return (
     <>
-      <h3 className="p-5">Characters</h3>
+      <h3 className="neon-text p-5">Characters</h3>
       <div className="d-flex justify-content-center">
         <div className="container row row-cols-5">
           {store.characters.map((character) => {
@@ -48,7 +49,7 @@ const CardCharacter = () => {
                             to={`/characters/${character.uid}`}
                             className="btn btn-success"
                           >
-                            See details
+                            Learn More
                           </Link>
                           <button
                             onClick={() => {
@@ -57,7 +58,7 @@ const CardCharacter = () => {
                                 _id: character._id,
                               });
                             }}
-                            className="btn btn-warning"
+                            className="favorito btn btn-warning"
                           >
                             <Star size={25} />
                           </button>

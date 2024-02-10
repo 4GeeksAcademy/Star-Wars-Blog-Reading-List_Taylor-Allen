@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
+import { Search } from "react-bootstrap-icons";
 
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
@@ -13,7 +14,7 @@ export const Navbar = () => {
             <img
               src="https://www.freepnglogos.com/uploads/star-wars-logo-png-10.png"
               alt="Bootstrap"
-              width="100"
+              width="150"
               height="64"
             />
           </Link>
@@ -30,7 +31,7 @@ export const Navbar = () => {
               />
             </form>
             <button className="btn btn-outline-light" type="submit">
-              Search
+              <Search size={25} />
             </button>
           </div>
           <div>
@@ -71,7 +72,6 @@ export const Navbar = () => {
                           className="d-flex justify-content-between my-2"
                         >
                           <li>{fav.name}</li>
-                          {/* {console.log(fav.uid)} */}
                           <button
                             onClick={() =>
                               actions.handleDelete({ _id: fav._id })

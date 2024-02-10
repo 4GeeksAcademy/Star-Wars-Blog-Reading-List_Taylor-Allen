@@ -3,12 +3,13 @@ import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import { Star } from "react-bootstrap-icons";
 
+
 const CardPlanets = () => {
   const { store, actions } = useContext(Context);
 
   return (
     <>
-      <h3>Planets</h3>
+      <h3 className="neon-text p-5">Planets</h3>
       <div className="d-flex justify-content-center">
         <div className="container row row-cols-5">
           {store.planets.map((planet) => {
@@ -43,7 +44,7 @@ const CardPlanets = () => {
                             to={`/planets/${planet.uid}`}
                             className="btn btn-success"
                           >
-                            See details
+                            Learn More
                           </Link>
                           <button
                             onClick={() => {

@@ -8,14 +8,14 @@ const CardVehicles = () => {
 
   return (
     <>
-      <h3>Vehicles</h3>
+      <h3 className="neon-text p-5">Vehicles</h3>
       <div className="d-flex justify-content-center">
         <div className="container row row-col-5">
           {store.vehicles.map((vehicle) => {
             return (
               <div key={vehicle.uid} id="vehicles" className="container col">
                 <div className="mb-3">
-                  <div className="card">
+                  <div className="card" style={{ width: "18rem" }}>
                     <div>
                       <img
                         className="img-fluid rounded"
@@ -42,7 +42,7 @@ const CardVehicles = () => {
                             to={`/vehicles/${vehicle.uid}`}
                             className="btn btn-success"
                           >
-                            See details
+                            Learn More
                           </Link>
                           <button
                             onClick={() => {
