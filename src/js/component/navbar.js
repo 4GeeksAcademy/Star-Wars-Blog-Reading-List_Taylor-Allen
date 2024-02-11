@@ -15,7 +15,7 @@ export const Navbar = () => {
       <div className="container">
         <div>
           <Link to={"/"} className="navbar-brand">
-            <img
+            <img className="sw-logo"
               src="https://www.freepnglogos.com/uploads/star-wars-logo-png-10.png"
               alt="Bootstrap"
               width="150"
@@ -25,18 +25,6 @@ export const Navbar = () => {
         </div>
         <div className="d-flex justify-content-center ">
           <div className="d-flex justify-content-center pe-2">
-            {/* <form className="d-flex" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-                autoComplete="on"
-              />
-            </form>
-            <button className="btn btn-outline-light" type="submit">
-              <Search size={25} />
-            </button> */}
             <div className="searcher">
               <SearchBar setResults={setResults} />
               {results && results.length > 0 && (
@@ -56,7 +44,10 @@ export const Navbar = () => {
             </button>
             <ul className="dropdown-menu">
               {store.favorites.map((fav, index) => (
-                <div key={index} className="favs d-flex justify-content-around">
+                <div
+                  key={index}
+                  className="favs d-flex justify-content-between"
+                >
                   <div>
                     {" "}
                     <li className="dropdown-item">{fav.name}</li>
@@ -64,7 +55,7 @@ export const Navbar = () => {
                   <div>
                     <button
                       onClick={() => actions.handleDelete({ _id: fav._id })}
-                      className="btn rounded d-flex justify-content-center"
+                      className="btn rounded d-flex justify-content-between"
                     >
                       <XLg size={15} />
                     </button>

@@ -1,0 +1,23 @@
+.favorite-button {
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #ffc404;
+  border: none;
+  border-radius: px;
+  box-shadow: 0 5px #999;
+  display: flex;
+  justify-content: center;
+}
+
+.favorite-button:hover {
+  background-color: #ffc404;
+}
+
+.favorite-button:active {
+  background-color: #e4e80c9d;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

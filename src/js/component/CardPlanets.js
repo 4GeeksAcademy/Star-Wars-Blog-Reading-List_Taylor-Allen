@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import { Star } from "react-bootstrap-icons";
-
+import "../../styles/cardbuttons.css";
 
 const CardPlanets = () => {
   const { store, actions } = useContext(Context);
@@ -53,7 +53,7 @@ const CardPlanets = () => {
                                 _id: planet._id,
                               });
                             }}
-                            className="btn btn-warning"
+                            className="favorite-button btn btn-warning"
                           >
                             <Star size={25} />
                           </button>
