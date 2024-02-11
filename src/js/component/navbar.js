@@ -1,7 +1,8 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
-import { Search } from "react-bootstrap-icons";
+import { Search, XLg } from "react-bootstrap-icons";
+import "../../styles/headers.css";
 
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
@@ -34,68 +35,34 @@ export const Navbar = () => {
               <Search size={25} />
             </button>
           </div>
-          <div>
+
+          <div className="dropdown">
             <button
+              className="btn btn-warning dropdown-toggle"
               type="button"
-              className="btn btn-warning"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
             >
               Favorites {store.favorites.length}
             </button>
-
-            <div
-              className="modal fade"
-              id="exampleModal"
-              tabIndex="-1"
-              aria-labelledby="exampleModalLabel"
-              aria-hidden="true"
-            >
-              <div className="modal-dialog">
-                <div className="modal-content">
-                  <div className="modal-header">
-                    <h1 className="modal-title fs-5" id="exampleModalLabel">
-                      Favorites
-                    </h1>
-                    <button
-                      type="button"
-                      className="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
+            <ul className="dropdown-menu">
+              {store.favorites.map((fav, index) => (
+                <div key={index} className="favs d-flex justify-content-around">
+                  <div>
+                    {" "}
+                    <li className="dropdown-item">{fav.name}</li>
                   </div>
-                  <div className="modal-body">
-                    <ul>
-                      {store.favorites.map((fav, index) => (
-                        <div
-                          key={index}
-                          className="d-flex justify-content-between my-2"
-                        >
-                          <li>{fav.name}</li>
-                          <button
-                            onClick={() =>
-                              actions.handleDelete({ _id: fav._id })
-                            }
-                            className="btn btn-danger rounded"
-                          >
-                            Remove
-                          </button>
-                        </div>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="modal-footer">
+                  <div>
                     <button
-                      type="button"
-                      className="btn btn-secondary"
-                      data-bs-dismiss="modal"
+                      onClick={() => actions.handleDelete({ _id: fav._id })}
+                      className="btn rounded d-flex justify-content-center"
                     >
-                      Close
+                      <XLg size={15} />
                     </button>
                   </div>
                 </div>
-              </div>
-            </div>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
