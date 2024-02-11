@@ -58,7 +58,7 @@ const CardCharacter = () => {
                                 _id: character._id,
                               });
                             }}
-                            className="favorito btn btn-warning"
+                            className="btn btn-warning"
                           >
                             <Star size={25} />
                           </button>

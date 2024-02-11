@@ -2,10 +2,13 @@ import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { Search, XLg } from "react-bootstrap-icons";
+import { SearchBar } from "./SearchBar.jsx";
 import "../../styles/headers.css";
+import { SearchResultsList } from "./SearchResultsList.jsx";
 
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
+  const [results, setResults] = useState([]);
 
   return (
     <nav className="navbar fixed-top navbar-light">
@@ -22,7 +25,7 @@ export const Navbar = () => {
         </div>
         <div className="d-flex justify-content-center ">
           <div className="d-flex justify-content-center pe-2">
-            <form className="d-flex" role="search">
+            {/* <form className="d-flex" role="search">
               <input
                 className="form-control me-2"
                 type="search"
@@ -33,7 +36,11 @@ export const Navbar = () => {
             </form>
             <button className="btn btn-outline-light" type="submit">
               <Search size={25} />
-            </button>
+            </button> */}
+            <SearchBar setResults={setResults} />
+            {results && results.length > 0 && (
+              <SearchResultsList results={results} />
+            )}
           </div>
 
           <div className="dropdown">
