@@ -1,12 +1,10 @@
 import React from "react";
 import "../../styles/SearchResult.css";
+import { Link } from "react-router-dom";
 
 export const SearchResult = ({ result }) => {
   return (
-    <div
-      className="search-result"
-      onClick={(e) => <Link to={`/characters/${character.uid}`} />}
-    >
+    <div onClick={(e) => <Link to={`/characters/${character.uid}`} />}>
       {result}
     </div>
   );

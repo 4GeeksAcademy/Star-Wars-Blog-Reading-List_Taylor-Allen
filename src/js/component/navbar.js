@@ -37,10 +37,12 @@ export const Navbar = () => {
             <button className="btn btn-outline-light" type="submit">
               <Search size={25} />
             </button> */}
-            <SearchBar setResults={setResults} />
-            {results && results.length > 0 && (
-              <SearchResultsList results={results} />
-            )}
+            <div className="searcher">
+              <SearchBar setResults={setResults} />
+              {results && results.length > 0 && (
+                <SearchResultsList results={results} />
+              )}
+            </div>
           </div>
 
           <div className="dropdown">

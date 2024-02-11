@@ -29,4 +29,7 @@ h3 {
   }
 }
 
-
+.searcher {
+  display: flex;
+  flex-direction: column;
+}
