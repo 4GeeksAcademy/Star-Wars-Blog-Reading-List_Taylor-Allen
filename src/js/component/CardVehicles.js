@@ -40,7 +40,7 @@ const CardVehicles = () => {
                         <div className="card-text d-flex justify-content-between">
                           <Link
                             to={`/vehicles/${vehicle.uid}`}
-                            className="btn btn-success"
+                            className="btn btn-light"
                           >
                             Learn More
                           </Link>
